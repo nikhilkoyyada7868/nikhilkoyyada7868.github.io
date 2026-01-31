@@ -8,134 +8,106 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 
 <body>
+
+<div id="progress-bar"></div>
 
 <!-- NAVBAR -->
 <div class="navbar">
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
+  <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
+  <button onclick="toggleDarkMode()">🌙</button>
 </div>
 
-<div class="container" id="home">
-
-<!-- HERO SECTION -->
-<div class="hero">
-  <h1>Hi, I'm Nikhil 👋</h1>
-  <p>MBA @ IIM Bangalore | Product Thinker | Experiment Builder</p>
-  <p>
-    I design experiments, build products, and solve real user problems
-    through empathy, data, and innovation.
-  </p>
-
-  <button onclick="document.getElementById('projects').scrollIntoView()">
-    View My Work
-  </button>
-</div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-overlay">
+    <h1>Hi, I'm Nikhil 👋</h1>
+    <p>MBA @ IIM Bangalore | Product Thinker | Experiment Builder</p>
+    <button onclick="document.getElementById('projects').scrollIntoView()">
+      View My Work
+    </button>
+  </div>
+</section>
 
 <!-- ABOUT -->
-<div class="about-section hidden" id="about">
-  <img src="Nikhil Koyyada.jpeg" alt="Nikhil" class="profile-pic">
-
+<section class="about hidden" id="about">
+  <img src="profile.jpg" class="profile-pic">
   <h2>About Me</h2>
-  <p>
-    I'm an MBA student at IIM Bangalore passionate about product thinking,
-    experimentation, and solving real-world user problems.
-  </p>
-
-  <p>
-    My work focuses on fintech, AI-driven automation, and building scalable
-    user-centric solutions.
-  </p>
-</div>
-
-<hr>
+  <p>I build data-driven products focused on real user impact.</p>
+</section>
 
 <!-- PROJECTS -->
-<div class="projects hidden" id="projects">
+<section class="projects hidden" id="projects">
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <h3>💼 VyapaarMitra</h3>
-    <p><strong>Problem:</strong> MSMEs struggle to access timely credit.</p>
-    <p><strong>Solution:</strong> Built a GST-based fintech scoring model.</p>
-    <p><strong>Impact:</strong> Simplified working capital assessment using alternative data.</p>
-    <div class="tags">
-      <span>Fintech</span>
-      <span>Credit Scoring</span>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="project1.jpg">
+      <h3>VyapaarMitra</h3>
+      <p>Fintech solution for MSME credit scoring.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="project2.jpg">
+      <h3>WhatsApp Mood Tracker</h3>
+      <p>Behavior tracking bot using automation.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="project3.jpg">
+      <h3>AI Experiments</h3>
+      <p>LLM-powered product innovation.</p>
     </div>
   </div>
+</section>
 
-  <div class="project-card">
-    <h3>📱 WhatsApp Mood Tracker</h3>
-    <p>Built a WhatsApp bot to track emotional patterns using Twilio and automation.</p>
-    <div class="tags">
-      <span>Automation</span>
-      <span>Behavior Tracking</span>
-    </div>
+<!-- EXPERIENCE -->
+<section class="experience hidden" id="experience">
+  <h2>Experience</h2>
+  <div class="icon-grid">
+    <div>💼 Amazon Internship</div>
+    <div>🚀 Product Hackathons</div>
+    <div>📊 Data Analytics</div>
   </div>
-
-  <div class="project-card">
-    <h3>🤖 AI Experiments</h3>
-    <p>Exploring LLMs, automation tools, and agentic workflows for product innovation.</p>
-    <div class="tags">
-      <span>AI</span>
-      <span>LLMs</span>
-    </div>
-  </div>
-
-</div>
-
-<hr>
-
-<!-- RESUME -->
-<div class="resume hidden" id="resume">
-  <h2>Resume</h2>
-  <p>You can download my resume below:</p>
-  <button onclick="window.open('Nikhil Koyyada Resume.pdf')">
-    Download Resume
-  </button>
-</div>
-
-<hr>
+</section>
 
 <!-- CONTACT -->
-<div class="contact hidden" id="contact">
+<section class="contact hidden" id="contact">
   <h2>Contact</h2>
-  <p>Let's connect 👇</p>
-
   <p>
-    <a href="https://www.linkedin.com/in/nikhilkoyyada/" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/nikhilkoyyada7868" target="_blank">GitHub</a> |
-    <a href="mailto:nikhil.kinvests@gmail.com">Email Me</a>
+    <a href="https://linkedin.com">LinkedIn</a> |
+    <a href="https://github.com">GitHub</a> |
+    <a href="mailto:youremail@gmail.com">Email</a>
   </p>
-</div>
+</section>
 
-</div>
+<footer>© 2025 Nikhil</footer>
 
-<footer>
-  <p>© 2025 Nikhil | Built with GitHub Pages</p>
-</footer>
-
-<!-- SCROLL ANIMATION SCRIPT -->
 <script>
+function toggleDarkMode(){
+  document.body.classList.toggle("dark");
+}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
+    if(entry.isIntersecting) entry.target.classList.add('show');
   });
 });
-
 document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+window.onscroll = function(){
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById("progress-bar").style.width = (winScroll / height) * 100 + "%";
+};
 </script>
 
 </body>
