@@ -1,46 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Nikhil Koyyada | Product Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-html {
-  scroll-behavior: smooth;
-}
-</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
 
-document.querySelectorAll('.project-card, .about-section, .resume, .contact')
-.forEach(el => {
-  el.classList.add('hidden');
-  observer.observe(el);
-});
-</script>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
 
 <body>
-  <div class="container" id="home">
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="container" id="home">
+
+<!-- HERO SECTION -->
 <div class="hero">
   <h1>Hi, I'm Nikhil 👋</h1>
   <p>MBA @ IIM Bangalore | Product Thinker | Experiment Builder</p>
   <p>
-    I enjoy designing experiments, building products, and solving real user
-    problems through empathy, data, and innovation.
+    I design experiments, build products, and solve real user problems
+    through empathy, data, and innovation.
   </p>
+
   <button onclick="document.getElementById('projects').scrollIntoView()">
     View My Work
   </button>
 </div>
-<div class="about-section">
+
+<!-- ABOUT -->
+<div class="about-section hidden" id="about">
   <img src="Nikhil Koyyada.jpeg" alt="Nikhil" class="profile-pic">
 
   <h2>About Me</h2>
@@ -55,51 +57,58 @@ document.querySelectorAll('.project-card, .about-section, .resume, .contact')
   </p>
 </div>
 
+<hr>
 
-<button onclick="document.getElementById('projects').scrollIntoView()">
-View My Work
-</button>
-    
-    <div class="projects" id="projects">
+<!-- PROJECTS -->
+<div class="projects hidden" id="projects">
   <h2>Projects</h2>
 
-<div class="project-card">
-  <h3>
-    💼 VyapaarMitra
-  </h3>
-  <p><strong>Problem:</strong> MSMEs struggle to access timely credit.</p>
-  <p><strong>Solution:</strong> Built a GST-based fintech scoring model.</p>
-  <p><strong>Impact:</strong> Simplified working capital assessment using alternative data.</p>
-  <div class="tags">
-    <span>Fintech</span>
-    <span>Credit Scoring</span>
+  <div class="project-card">
+    <h3>💼 VyapaarMitra</h3>
+    <p><strong>Problem:</strong> MSMEs struggle to access timely credit.</p>
+    <p><strong>Solution:</strong> Built a GST-based fintech scoring model.</p>
+    <p><strong>Impact:</strong> Simplified working capital assessment using alternative data.</p>
+    <div class="tags">
+      <span>Fintech</span>
+      <span>Credit Scoring</span>
+    </div>
   </div>
+
+  <div class="project-card">
+    <h3>📱 WhatsApp Mood Tracker</h3>
+    <p>Built a WhatsApp bot to track emotional patterns using Twilio and automation.</p>
+    <div class="tags">
+      <span>Automation</span>
+      <span>Behavior Tracking</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>🤖 AI Experiments</h3>
+    <p>Exploring LLMs, automation tools, and agentic workflows for product innovation.</p>
+    <div class="tags">
+      <span>AI</span>
+      <span>LLMs</span>
+    </div>
+  </div>
+
 </div>
 
-<div class="project-card">
-  <h3>📱 WhatsApp Mood Tracker</h3>
-  <p>Built a WhatsApp bot to track emotional patterns using Twilio and automation.</p>
-  <div class="tags">
-    <span>Automation</span>
-    <span>Behavior Tracking</span>
-  </div>
-</div>
+<hr>
 
-<div class="project-card">
-  <h3>🤖 AI Experiments</h3>
-  <p>Exploring LLMs, automation tools, and agentic workflows for product innovation.</p>
-  <div class="tags">
-    <span>AI</span>
-    <span>LLMs</span>
-  </div>
-</div>
-</div>
-<div class="resume" id="resume">
+<!-- RESUME -->
+<div class="resume hidden" id="resume">
   <h2>Resume</h2>
   <p>You can download my resume below:</p>
-  <button onclick="window.open('Nikhil Koyyada Resume.pdf')">Download Resume</button>
+  <button onclick="window.open('Nikhil Koyyada Resume.pdf')">
+    Download Resume
+  </button>
 </div>
-    <div class="contact" id="contact">
+
+<hr>
+
+<!-- CONTACT -->
+<div class="contact hidden" id="contact">
   <h2>Contact</h2>
   <p>Let's connect 👇</p>
 
@@ -110,19 +119,24 @@ View My Work
   </p>
 </div>
 
-  </div>
-</body>
-  <footer style="margin-top:50px; padding:20px; background:#f1f1f1;">
+</div>
+
+<footer>
   <p>© 2025 Nikhil | Built with GitHub Pages</p>
 </footer>
 
-  <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#projects">Projects</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
 
-</div>
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
-
+</body>
 </html>
