@@ -4,9 +4,7 @@
   <title>Nikhil Koyyada | Product Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" href="style.css">
-
   <style>
     html { scroll-behavior: smooth; }
   </style>
@@ -23,25 +21,25 @@
   <a href="#projects">Projects</a>
   <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
-  <button onclick="toggleDarkMode()">🌙</button>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-overlay">
-    <h1>Hi, I'm Nikhil 👋</h1>
-    <p>MBA @ IIM Bangalore | Product Thinker | Experiment Builder</p>
-    <button onclick="document.getElementById('projects').scrollIntoView()">
-      View My Work
-    </button>
-  </div>
-</section>
+<div class="container" id="home">
+
+<h1 class="headline">Nikhil Koyyada</h1>
+<p class="subtitle">
+MBA @ IIM Bangalore • Product Thinker • Experiment Builder
+</p>
+
+</div>
 
 <!-- ABOUT -->
 <section class="about hidden" id="about">
-  <img src="profile.jpeg" class="profile-pic">
+  <img src="profile.jpg" class="profile-pic">
   <h2>About Me</h2>
-  <p>I build data-driven products focused on real user impact.</p>
+  <p>
+    I’m passionate about building products that solve real user problems
+    using data, experimentation, and empathy.
+  </p>
 </section>
 
 <!-- PROJECTS -->
@@ -49,23 +47,34 @@
   <h2>Projects</h2>
 
   <div class="project-grid">
+
     <div class="project-card">
-      <img src="project1.jpg">
-      <h3>VyapaarMitra</h3>
-      <p>Fintech solution for MSME credit scoring.</p>
+      <h3>💼 VyapaarMitra</h3>
+      <p>Fintech app helping MSMEs access working capital using GST-based credit scoring.</p>
+      <div class="tags">
+        <span>Fintech</span>
+        <span>Credit</span>
+      </div>
     </div>
 
     <div class="project-card">
-      <img src="project2.jpg">
-      <h3>WhatsApp Mood Tracker</h3>
-      <p>Behavior tracking bot using automation.</p>
+      <h3>📱 WhatsApp Mood Tracker</h3>
+      <p>Behavioral tracking bot built using automation and AI insights.</p>
+      <div class="tags">
+        <span>Automation</span>
+        <span>Behavior</span>
+      </div>
     </div>
 
     <div class="project-card">
-      <img src="project3.jpg">
-      <h3>AI Experiments</h3>
-      <p>LLM-powered product innovation.</p>
+      <h3>🤖 AI Experiments</h3>
+      <p>Exploring LLMs, product workflows, and agentic automation systems.</p>
+      <div class="tags">
+        <span>AI</span>
+        <span>LLMs</span>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -74,8 +83,8 @@
   <h2>Experience</h2>
   <div class="icon-grid">
     <div>💼 Amazon Internship</div>
-    <div>🚀 Product Hackathons</div>
-    <div>📊 Data Analytics</div>
+    <div>🚀 Hackathons & Case Competitions</div>
+    <div>📊 Data & Analytics</div>
   </div>
 </section>
 
@@ -83,19 +92,17 @@
 <section class="contact hidden" id="contact">
   <h2>Contact</h2>
   <p>
-    <a href="https://linkedin.com">LinkedIn</a> |
-    <a href="https://github.com">GitHub</a> |
-    <a href="mailto:youremail@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/nikhilkoyyada/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/nikhilkoyyada7868" target="_blank">GitHub</a> |
+    <a href="mailto:nikhil.kinvests@gmail.com">Email</a>
   </p>
 </section>
 
-<footer>© 2025 Nikhil</footer>
+<footer>
+  © 2025 Nikhil Koyyada
+</footer>
 
 <script>
-function toggleDarkMode(){
-  document.body.classList.toggle("dark");
-}
-
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if(entry.isIntersecting) entry.target.classList.add('show');
