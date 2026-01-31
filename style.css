@@ -1,74 +1,73 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f9fbfd;
-  color: #333;
+  background: #0f1117;
+  color: #e4e6eb;
 }
 
-.dark {
-  background: #121212;
-  color: white;
-}
-
+/* PROGRESS BAR */
 #progress-bar {
   position: fixed;
   height: 4px;
-  background: #1a73e8;
+  background: #4c9aff;
   width: 0%;
   z-index: 9999;
 }
 
+/* NAVBAR */
 .navbar {
-  position: fixed;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  background: rgba(15,17,23,0.85);
   backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.8);
-  text-align: center;
   padding: 15px;
+  text-align: center;
+  z-index: 1000;
 }
 
 .navbar a {
   margin: 0 15px;
-  color: #1a73e8;
+  text-decoration: none;
+  color: #4c9aff;
   font-weight: bold;
 }
 
-.hero {
-  height: 100vh;
-  background: url("hero.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-overlay {
-  background: rgba(0,0,0,0.4);
-  padding: 50px;
-  color: white;
-  text-align: center;
-  border-radius: 12px;
-}
-
+/* SECTIONS */
 section {
   padding: 80px 20px;
   text-align: center;
 }
 
-.profile-pic {
-  width: 150px;
-  border-radius: 50%;
+/* HEADLINE */
+.headline {
+  font-size: 48px;
+  margin-top: 120px;
 }
 
+.subtitle {
+  color: #9aa0a6;
+}
+
+/* ABOUT */
+.profile-pic {
+  width: 160px;
+  border-radius: 50%;
+  border: 3px solid #4c9aff;
+  margin-bottom: 20px;
+}
+
+/* PROJECTS */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .project-card {
-  background: white;
+  background: rgba(255,255,255,0.05);
   border-radius: 12px;
-  overflow: hidden;
+  padding: 20px;
+  backdrop-filter: blur(10px);
   transition: transform .3s;
 }
 
@@ -76,15 +75,39 @@ section {
   transform: translateY(-5px);
 }
 
-.project-card img {
-  width: 100%;
+.project-card h3 {
+  color: #4c9aff;
 }
 
+/* TAGS */
+.tags span {
+  background: rgba(76,154,255,0.2);
+  color: #4c9aff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/* EXPERIENCE */
 .icon-grid div {
   margin: 10px;
   font-size: 18px;
 }
 
+/* LINKS */
+a {
+  color: #4c9aff;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #9aa0a6;
+}
+
+/* ANIMATIONS */
 .hidden {
   opacity: 0;
   transform: translateY(20px);
