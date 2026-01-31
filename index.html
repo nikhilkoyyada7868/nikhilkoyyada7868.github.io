@@ -11,6 +11,21 @@ html {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.project-card, .about-section, .resume, .contact')
+.forEach(el => {
+  el.classList.add('hidden');
+  observer.observe(el);
+});
+</script>
 
 <body>
   <div class="container" id="home">
