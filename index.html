@@ -8,298 +8,179 @@
 </head>
 
 <body>
-  <div id="progress"></div>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="wrap nav__inner">
-      <div class="nav__brand">NK</div>
-      <div class="nav__links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav__inner">
+    <div class="nav__brand">NK</div>
+    <div class="nav__links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER (CENTERED) -->
+<header class="header" id="home">
+  <div class="wrap">
+    <div class="header__card reveal header--centered">
+
+      <div class="avatar">
+        <img src="profile.jpg" alt="Nikhil profile">
+      </div>
+
+      <h1>Nikhil Koyyada</h1>
+      <p class="muted">
+        MBA @ IIM Bangalore · Product Thinker · Experiment Builder
+      </p>
+
+      <p class="header__one-liner">
+        I build products that solve real user problems through data,
+        experimentation, and empathy.
+      </p>
+
+      <div class="cta">
+        <a class="btn btn--primary" href="#projects">View Projects</a>
+        <a class="btn btn--ghost" href="#contact">Contact</a>
+      </div>
+
+      <div class="meta">
+        <span class="pill">Fintech</span>
+        <span class="pill">AI</span>
+        <span class="pill">Automation</span>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>About</h2>
+      <p class="muted">What I care about and how I work.</p>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <h3>How I think</h3>
+        <ul class="list">
+          <li>User-first problem framing</li>
+          <li>Fast experimentation</li>
+          <li>Metrics-driven iteration</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>What I build</h3>
+        <ul class="list">
+          <li>Fintech products for MSMEs</li>
+          <li>WhatsApp-first automation</li>
+          <li>LLM-powered workflows</li>
+        </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HEADER -->
-  <header class="header" id="home">
-    <div class="wrap">
-      <div class="header__card reveal">
-        <div class="header__top">
-          <div class="avatar">
-            <!-- rename your image to profile.jpg (recommended) OR keep your current file name below -->
-            <img src="profile.jpg" alt="Nikhil profile" onerror="this.src='Nikhil Koyyada.jpeg'" />
-          </div>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Projects</h2>
+      <p class="muted">Selected work and experiments.</p>
+    </div>
 
-          <div class="header__text">
-            <h1>Nikhil Koyyada</h1>
-            <p class="muted">MBA @ IIM Bangalore · Product Thinker · Experiment Builder</p>
+    <div class="project-grid reveal">
+      <div class="project card">
+        <h3>💼 VyapaarMitra</h3>
+        <p class="muted">GST-based credit scoring for MSMEs.</p>
+      </div>
 
-            <div class="cta">
-              <a class="btn btn--primary" href="#projects">View Projects</a>
-              <a class="btn btn--ghost" href="#contact">Contact</a>
-            </div>
+      <div class="project card">
+        <h3>📱 WhatsApp Mood Tracker</h3>
+        <p class="muted">Daily behavioral tracking via WhatsApp.</p>
+      </div>
 
-            <div class="meta">
-              <span class="pill">Fintech</span>
-              <span class="pill">AI</span>
-              <span class="pill">Automation</span>
-            </div>
-          </div>
-        </div>
-
-        <p class="header__one-liner">
-          I build products that solve real user problems through data, experimentation, and empathy.
-        </p>
+      <div class="project card">
+        <h3>🤖 AI Experiments</h3>
+        <p class="muted">LLM workflows and agentic systems.</p>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>About</h2>
-        <p class="muted">A quick snapshot of what I care about and how I work.</p>
-      </div>
-
-      <div class="grid-2 reveal">
-        <div class="card">
-          <h3>How I think</h3>
-          <ul class="list">
-            <li><strong>Start with users:</strong> pain points → behaviors → jobs-to-be-done.</li>
-            <li><strong>Ship fast:</strong> small experiments, quick feedback loops.</li>
-            <li><strong>Measure impact:</strong> define metrics early, iterate with data.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>What I’m building</h3>
-          <ul class="list">
-            <li>Fintech concepts for MSMEs and credit underwriting.</li>
-            <li>WhatsApp-first automation products with low friction UX.</li>
-            <li>LLM workflows and agentic systems for product teams.</li>
-          </ul>
-        </div>
-      </div>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Experience</h2>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Projects</h2>
-        <p class="muted">A few things I’ve built / explored recently.</p>
-      </div>
-
-      <div class="project-grid reveal">
-        <!-- Project 1 -->
-        <article class="project">
-          <!-- If you have project images, rename them to project1.jpg / project2.jpg / project3.jpg -->
-          <div class="project__media">
-            <img src="project1.jpg" alt="VyapaarMitra cover" onerror="this.style.display='none'; this.parentElement.classList.add('media--fallback');" />
-            <div class="media-fallback">
-              <div class="media-icon">💼</div>
-              <div class="media-title">VyapaarMitra</div>
-              <div class="media-subtitle">MSME working-capital</div>
-            </div>
-          </div>
-
-          <div class="project__body">
-            <h3>VyapaarMitra</h3>
-            <p class="muted">
-              Fintech concept to help MSMEs access timely credit using GST-driven signals and alternative data.
-            </p>
-
-            <div class="chips">
-              <span class="chip">Fintech</span>
-              <span class="chip">Credit Scoring</span>
-              <span class="chip">MSME</span>
-            </div>
-
-            <div class="project__footer">
-              <a class="link" href="#contact">Discuss →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project">
-          <div class="project__media">
-            <img src="project2.jpg" alt="WhatsApp Mood Tracker cover" onerror="this.style.display='none'; this.parentElement.classList.add('media--fallback');" />
-            <div class="media-fallback">
-              <div class="media-icon">📱</div>
-              <div class="media-title">WhatsApp Mood Tracker</div>
-              <div class="media-subtitle">Daily behavior logging</div>
-            </div>
-          </div>
-
-          <div class="project__body">
-            <h3>WhatsApp Mood Tracker</h3>
-            <p class="muted">
-              Built a WhatsApp bot to track moods and patterns with automation-first UX.
-            </p>
-
-            <div class="chips">
-              <span class="chip">Automation</span>
-              <span class="chip">WhatsApp</span>
-              <span class="chip">Habit</span>
-            </div>
-
-            <div class="project__footer">
-              <a class="link" href="#contact">Discuss →</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project">
-          <div class="project__media">
-            <img src="project3.jpg" alt="AI Experiments cover" onerror="this.style.display='none'; this.parentElement.classList.add('media--fallback');" />
-            <div class="media-fallback">
-              <div class="media-icon">🤖</div>
-              <div class="media-title">AI Experiments</div>
-              <div class="media-subtitle">LLMs & agents</div>
-            </div>
-          </div>
-
-          <div class="project__body">
-            <h3>AI Experiments</h3>
-            <p class="muted">
-              Exploring LLM workflows, agentic automation, and product UX patterns for AI features.
-            </p>
-
-            <div class="chips">
-              <span class="chip">AI</span>
-              <span class="chip">LLMs</span>
-              <span class="chip">Agents</span>
-            </div>
-
-            <div class="project__footer">
-              <a class="link" href="#contact">Discuss →</a>
-            </div>
-          </div>
-        </article>
-      </div>
+    <div class="timeline reveal">
+      <div class="tl-item">💼 Amazon Internship</div>
+      <div class="tl-item">🚀 Hackathons & Case Competitions</div>
+      <div class="tl-item">📊 Data & Analytics Projects</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Experience</h2>
-        <p class="muted">A simple timeline-style view.</p>
-      </div>
-
-      <div class="timeline reveal">
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content card">
-            <div class="tl-top">
-              <span class="tl-title">💼 Amazon Internship</span>
-              <span class="tl-time muted">Internship</span>
-            </div>
-            <p class="muted">Worked on product-oriented problems with measurable outcomes.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content card">
-            <div class="tl-top">
-              <span class="tl-title">🚀 Hackathons & Case Competitions</span>
-              <span class="tl-time muted">Ongoing</span>
-            </div>
-            <p class="muted">Rapid prototyping, storytelling, and business model thinking.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-dot"></div>
-          <div class="tl-content card">
-            <div class="tl-top">
-              <span class="tl-title">📊 Data & Analytics Projects</span>
-              <span class="tl-time muted">Ongoing</span>
-            </div>
-            <p class="muted">Metrics, experimentation, and decision-making with data.</p>
-          </div>
-        </div>
-      </div>
+<!-- RESUME -->
+<section id="resume">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Resume</h2>
     </div>
-  </section>
 
-  <!-- RESUME -->
-  <section id="resume">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Resume</h2>
-        <p class="muted">One click download.</p>
-      </div>
-
-      <div class="card reveal resume-card">
-        <div>
-          <p class="muted">Download PDF</p>
-          <p><strong>Nikhil Koyyada Resume</strong></p>
-        </div>
-        <a class="btn btn--primary" href="Nikhil Koyyada Resume.pdf" target="_blank" rel="noopener">Download</a>
-      </div>
+    <div class="card resume-card reveal">
+      <span>Nikhil Koyyada Resume (PDF)</span>
+      <a class="btn btn--primary" href="Nikhil Koyyada Resume.pdf" target="_blank">Download</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Contact</h2>
-        <p class="muted">Let’s build something meaningful.</p>
-      </div>
-
-      <div class="card reveal contact-card">
-        <a class="contact-link" href="https://www.linkedin.com/in/nikhilkoyyada/" target="_blank" rel="noopener">
-          <span class="contact-ic">in</span> LinkedIn
-        </a>
-        <a class="contact-link" href="https://github.com/nikhilkoyyada7868" target="_blank" rel="noopener">
-          <span class="contact-ic">GH</span> GitHub
-        </a>
-        <a class="contact-link" href="mailto:nikhil.kinvests@gmail.com">
-          <span class="contact-ic">@</span> Email
-        </a>
-      </div>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Contact</h2>
+      <p class="muted">Let’s connect.</p>
     </div>
-  </section>
 
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <span class="muted">© 2026 Nikhil Koyyada</span>
-      <span class="muted">Built on GitHub Pages</span>
+    <div class="contact-card reveal">
+      <a class="contact-link" href="https://www.linkedin.com/in/nikhilkoyyada/" target="_blank">LinkedIn</a>
+      <a class="contact-link" href="https://github.com/nikhilkoyyada7868" target="_blank">GitHub</a>
+      <a class="contact-link" href="mailto:nikhil.kinvests@gmail.com">Email</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    // Progress bar
-    const progress = document.getElementById("progress");
-    window.addEventListener("scroll", () => {
-      const scrolled = document.documentElement.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const pct = (scrolled / height) * 100;
-      progress.style.width = pct + "%";
-    });
+<footer class="footer">
+  © 2026 Nikhil Koyyada
+</footer>
 
-    // Reveal on scroll
-    const revealEls = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) e.target.classList.add("in");
-      });
-    }, { threshold: 0.12 });
+<script>
+/* Progress bar */
+const progress = document.getElementById("progress");
+window.addEventListener("scroll", () => {
+  const scrolled = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  progress.style.width = (scrolled / height) * 100 + "%";
+});
 
-    revealEls.forEach((el) => io.observe(el));
-  </script>
+/* Reveal */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => e.isIntersecting && e.target.classList.add("in"));
+}, { threshold: 0.15 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+
 </body>
 </html>
