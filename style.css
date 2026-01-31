@@ -52,4 +52,23 @@ button:hover {
   margin-top: 0;
   color: #1a73e8;
 }
+.navbar {
+  background: white;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+.resume {
+  margin-top: 60px;
+}
+
 
