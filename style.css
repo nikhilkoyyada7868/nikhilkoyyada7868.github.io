@@ -2,62 +2,54 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f7fa;
+  background: linear-gradient(to bottom, #f9fbfd, #eef2f7);
   color: #333;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 10px;
 }
 
 h2 {
   color: #1a73e8;
+  margin-top: 50px;
+}
+
+p {
+  line-height: 1.6;
 }
 
 button {
-  padding: 12px 20px;
+  padding: 14px 22px;
   border: none;
   background: #1a73e8;
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background: #1558b0;
+  transform: translateY(-2px);
 }
 
-.projects {
-  margin-top: 50px;
-}
-
-.project-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 15px 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  text-align: left;
-}
-
-.project-card h3 {
-  margin-top: 0;
-  color: #1a73e8;
-}
 .navbar {
   background: white;
   padding: 15px;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  z-index: 1000;
 }
 
 .navbar a {
@@ -65,6 +57,36 @@ button:hover {
   text-decoration: none;
   color: #1a73e8;
   font-weight: bold;
+}
+
+.projects {
+  margin-top: 40px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #1a73e8;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 25px;
+  background: #f1f1f1;
 }
 
 .resume {
